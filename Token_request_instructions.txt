@@ -1,0 +1,138 @@
+# SPOTIFY AUTHORIZATION CODE FLOW
+https://developer.spotify.com/documentation/general/guides/authorization-guide/
+
+***ACCESS TOKEN AND REFRESH TOKEN REQUEST FOR RECENTLY PLAYED TRACKS***
+
+*PARAMETERS*
+
+- client_id
+- response_type=code
+- redirect_uri (Must be set on your project dashboard, it can be the same dashboard linke)
+- scope=user-read-recently-played
+- client_secret
+
+*THIS LINK MUST BE FILLED WITH THE INFORMATION FROM ABOVE*
+https://accounts.spotify.com/authorize?client_id="DATA"&response_type=code&redirect_uri="DATA"&scope=user-read-recently-played
+
+After inserting this url in your web explorer, accept and from the new url copy the "code=".
+
+**CURL #1**
+
+ENCODE "client_id:client_secret" to 64bits  
+Webpage for encoding to 64 bits -> https://www.base64encode.org/
+
+*PARAMETERS*
+
+Header -> Authorization: Basic "client_id:client_secret" (Encoded)
+data -> grant_type=authorization_code
+data -> code=(Code we received from the URL above)
+data -> redirect_uri=r(URL WE USED ABOVE)
+https://accounts.spotify.com/api/token
+
+*PASTE THIS ON THE TERMINAL*
+
+curl -H "Authorization: Basic "client_id:client_secret"=" -d grant_type=authorization_code -d code="DATA" -d redirect_uri="DATA" https://accounts.spotify.com/api/token
+
+You'll receive a python dictionary/json file like the one below which includes the access token, refresh token, expiry and the scope. After the access token expires you will use the refresh token to request new access tokens. The refresh token can be used infinetely.
+
+*RECEIVED RESOURCE*
+
+{"access_token":"BQD5aMYz3CgJWaMkVpa0q1hsLfpdskJikfIy8EpKFx9Aqu_r4_oQWP-jJs4LVW83uXZY0y0wKNzayhyBT2oHAYzUiMkSLX-uisSzj2bYOZN63MYQ5DQ0X4G1AC0UztHgS9lbvnZcu_THGMm42AQEq1G9",
+"token_type":"Bearer",
+"expires_in":3600,
+"refresh_token":"AQBYXIOttnhSQ9E-NIE5dG0snrxmi0UX_0iID7fvngQERMaHqtTQuK2X-78sjdqFXGlDay-Ku8pQ_RU5GoAHt6TAUfYc2D5sriV4xNhliJZKhbcdYAUQrsPEW7jauFvceUc",
+"scope":"user-read-recently-played"}
+
+*CURL #2 (Optional)*
+
+This is used to request the information of the user who has given you access to his/her profile.
+
+**PARAMETERS**
+
+- Header -> Authorization: Bearer "access_token"
+- url -> https://api.spotify.com/v1/me
+
+*PASTE THIS ON THE TERMINAL*
+
+curl -H "Authorization: Bearer "access_token" https://api.spotify.com/v1/me
+
+*RECEIVED RESOURCE* 
+
+{
+  "display_name" : "Person_name",
+  "external_urls" : {
+    "spotify" : "Users_Spotify_profile_page"
+  },
+  "followers" : {
+    "href" : null,
+    "total" : "amount_of_followers"
+  },
+  "href" : "Hypertext_refrence",
+  "id" : "User_id",
+  "images" : [ {
+    "height" : null,
+    "url" : "url",
+    "width" : null
+  } ],
+  "type" : "user",
+  "uri" : "uniform_resource_identifier"
+}
+
+**CURL #3**
+
+After your access token has expired, the refresh token is used to request a new access token.
+
+**PARAMETERS**
+
+- Headers -> Authorization: Basic "client_id:client_secret" (Encoded)
+- data -> grant_type=refresh_token
+- data -> refresh_token= Refresh token given in the CURL #1
+- url -> https://accounts.spotify.com/api/token
+
+*PASTE THIS ON THE TERMINAL*
+
+curl -H "Authorization: Basic "client_id:client_secret" (Encoded) " -d grant_type=refresh_token -d refresh_token="DATA" https://accounts.spotify.com/api/token
+
+*RECEIVED RESOURCE*
+
+{"access_token":"BQBROJvhGjuTmcVt7WWYTdh6EXz-5XUFcsdE16UF8AHPmtyIgTkfEBQHQqWW5_S4Uml5MYsAAkWG0I56kS0K0W-EWC8QcCrLRag_5sa_i9qkd5aAsdN0zGCcn_tJ25ElY4EHqC-6GKh7nh5zQn75M72_mmX7hHNCX9M-1CA8pYp6FWXTDuuelOFxLVaDoX1HfgitVg", 
+"token_type":"Bearer",
+"expires_in":3600,
+"scope":"playlist-read-private playlist-modify-private user-read-playback-state user-read-recently-played"}
+
+**REQUESTING A NEW TOKEN IN A PYTHON SCRIPT**
+
+Create two dictionaries, one for the headers and another one for the data.
+
+headers = {
+  Authorization: Basic "client_id:client_secret ENCODED"
+}
+
+data = {
+  "grant_type": "refresh_token"
+  "refresh_token" : "DATA"  
+}
+
+url = https://accounts.spotify.com/api/token
+
+import requests (POST)
+import json
+
+request = requests.post(url, headers=headers, data=data)
+print(request) -> [200] It means the request has been accepted and the resouce has been created. 
+data = request.json()
+access_token_data = data["access_token"]
+print(access_token_data)
+
+By doing this a new token will be requested everytime the script runs, zero token expiry issues. 
+
+
+
+
+
+
+
+
+
+
+
