@@ -1,6 +1,10 @@
 # Pyspark Spotify ETL
 
-*Description* 
+***Description***
+ 
 
+***Essentials:***
+- Extra libraries that must be imported: sys, json, datetime.
 
+***ETL Execution***
 
