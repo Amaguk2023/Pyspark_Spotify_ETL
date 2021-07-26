@@ -2,5 +2,5 @@
 
 *Description* 
 
-Spotify API ETL, job scheduled with crontab (0 0 * * *). Scope = Recently Played Tracks
+Spotify API ETL, job scheduled with crontab. Scope = Recently Played Tracks
 
