@@ -10,7 +10,7 @@ import psycopg2
 from sqlalchemy import exc #Handles sqlalchemy errors
 
 
-#-------------------------------------------------------------------------DATA LOAD START--------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------DATA LOAD START---------------------------------------------------------------------------------------
 #LOAD DATA INTO SPOTIFY DATABASE TABLE
 def postgre_engine_load(df_spark):
     engine = create_engine('postgresql+psycopg2://', connect_args={'sslmode':'allow'})
