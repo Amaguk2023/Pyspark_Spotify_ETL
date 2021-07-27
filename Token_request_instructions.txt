@@ -39,10 +39,10 @@ You'll receive a python dictionary/json file like the one below which includes t
 
 *RECEIVED RESOURCE*
 
-{"access_token":"BQD5aMYz3CgJWaMkVpa0q1hsLfpdskJikfIy8EpKFx9Aqu_r4_oQWP-jJs4LVW83uXZY0y0wKNzayhyBT2oHAYzUiMkSLX-uisSzj2bYOZN63MYQ5DQ0X4G1AC0UztHgS9lbvnZcu_THGMm42AQEq1G9",
+{"access_token":"DATA",
 "token_type":"Bearer",
 "expires_in":3600,
-"refresh_token":"AQBYXIOttnhSQ9E-NIE5dG0snrxmi0UX_0iID7fvngQERMaHqtTQuK2X-78sjdqFXGlDay-Ku8pQ_RU5GoAHt6TAUfYc2D5sriV4xNhliJZKhbcdYAUQrsPEW7jauFvceUc",
+"refresh_token":"DATA",
 "scope":"user-read-recently-played"}
 
 *CURL #2 (Optional)*
