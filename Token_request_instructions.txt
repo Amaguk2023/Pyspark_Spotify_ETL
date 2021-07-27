@@ -1,6 +1,8 @@
 # SPOTIFY AUTHORIZATION CODE FLOW
 https://developer.spotify.com/documentation/general/guides/authorization-guide/
 
+- First Create your dashboard "https://developer.spotify.com/dashboard/login". Without this you won't get your client_id nor client_secret.
+
 ***ACCESS TOKEN AND REFRESH TOKEN REQUEST FOR RECENTLY PLAYED TRACKS***
 
 *PARAMETERS*
