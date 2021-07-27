@@ -19,5 +19,5 @@ This is my first Data Engineering project, it extracts data from the user's rece
 
 **Extras**
 
-- To verify that your scheduled job is running you can change the crontab to "* * * * *".
+- To verify that your scheduled job is working you can change the crontab to "* * * * *".
 - Here is the website https://developer.spotify.com/documentation/general/guides/scopes/ with other scopes in case you don't want to use "recently played tracks".
