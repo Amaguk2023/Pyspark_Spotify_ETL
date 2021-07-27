@@ -1,4 +1,4 @@
-from pyspark.sql import SparkSession #SparkSession is the entry point for programming Spark applications. It let you interact with DataSet and DataFrame APIs provided by Spark.
+from pyspark.sql import SparkSession 
 from pyspark.sql import SQLContext
 from sqlalchemy import create_engine
 import pandas as pd
