@@ -15,7 +15,7 @@ This is my first Data Engineering project, it extracts data from the user's rece
 - Add your you postgreSQL credentials for the engine creation. In case you'll be using another RDBMS, use this website https://docs.sqlalchemy.org/en/14/core/engines.html.
 - Create SQL Database/Table (Optional).
 - Create .sh file.
-- Create crontab or use the existing one if you want the job to run on midnight every day. 
+- Create a new crontab or use the existing one if you want the job to run on midnight every day. 
 
 **Extras**
 
