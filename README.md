@@ -15,7 +15,7 @@ This a Data Engineer project that extracts data from the user's recently played 
 - Add your you postgreSQL credentials for the engine creation. In case you'll be using another RDBMS, search in this website "https://docs.sqlalchemy.org/en/14/core/engines.html" the engine that fits you. 
 - Create SQL Database/Table (Optional).
 - Create .sh file.
-- Create crontab or use the existing one in case you want the job to run on midnight every day. 
+- Create crontab or use the existing one if you want the job to run on midnight every day. 
 
 **Extras**
 
