@@ -2,7 +2,7 @@
 
 ***Description:***
  
-This a Data Engineer project that extracts data from the user's recently played tracks console with the help of Spotify's API, transforms data and then loads it into Postgresql using SQLAlchemy engine. The ETL job is executed with crontab on midnight and the data is shown as a Spark Dataframe before loading. Access Token never expires since a POST HTTP method with Spotify's token API in the beginning of the script. 
+This a Data Engineer project that extracts data from the user's recently played tracks console using Spotify's API, transforms data and then loads it into Postgresql using SQLAlchemy engine. The ETL job is executed with crontab on midnight and the data is shown as a Spark Dataframe before loading. Access Token never expires since a POST HTTP method with Spotify's token API in the beginning of the script. 
 
 ***Essentials:***
 - Extra libraries that must be imported: sys, json, datetime.
