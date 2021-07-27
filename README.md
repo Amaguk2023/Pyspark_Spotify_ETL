@@ -18,4 +18,4 @@ This a Data Engineer project that extracts data from the user's recently played 
 
 **Extras**
 
-- To verify that your scheduled job is running, change the crontab to "* * * * *".
+- To verify that your scheduled job is running, change the crontab time to "* * * * *"
