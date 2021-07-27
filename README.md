@@ -15,3 +15,7 @@ This a Data Engineer project that extracts data from the user's recently played 
 - Create your database and table in your SQL Server in case you don't have none.
 - Create .sh file.
 - Create crontab or use the existing one in case you want the job to run on midnight every day. 
+
+**Extras**
+
+- To verify that your scheduled job is running, change the crontab to "* * * * *".
