@@ -19,5 +19,5 @@ This a Data Engineer project that extracts data from the user's recently played 
 
 **Extras**
 
-- To verify that your scheduled job is running, change the crontab time to "* * * * *"
+- To verify that your scheduled job is running change the crontab to "* * * * *"
 - In case you don't want your scope to be "recently played tracks", check this list "https://developer.spotify.com/documentation/general/guides/scopes/"
