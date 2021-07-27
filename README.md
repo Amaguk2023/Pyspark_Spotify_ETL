@@ -11,8 +11,8 @@ This is my first Data Engineering project, it extracts data from the user's rece
 ***ETL Execution:***
 
 - Install all the necessary libraries from the Pipfile.
-- Read the "Token_request_instructions" to get your own refresh token. In case you don't want that you can get one from this website "https://developer.spotify.com/console/get-recently-played/"	which will have to be requested every hour. 
-- Add your you postgreSQL credentials for the engine creation. In case you'll be using another RDBMS, search in this website "https://docs.sqlalchemy.org/en/14/core/engines.html" the engine that fits you. 
+- Read the "Token_request_instructions" to get your own refresh token. In case you don't want that you can get one from this website "https://developer.spotify.com/console/get-recently-played/" which will have to be requested every hour. 
+- Add your you postgreSQL credentials for the engine creation. In case you'll be using another RDBMS, use this website "https://docs.sqlalchemy.org/en/14/core/engines.html".
 - Create SQL Database/Table (Optional).
 - Create .sh file.
 - Create crontab or use the existing one if you want the job to run on midnight every day. 
