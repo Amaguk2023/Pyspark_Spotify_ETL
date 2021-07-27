@@ -69,7 +69,7 @@ curl -H "Authorization: Bearer "access_token" https://api.spotify.com/v1/me
     "href" : null,
     "total" : "amount_of_followers"
   },
-  "href" : "Hypertext_refrence",
+  "href" : "Hypertext_reference",
   "id" : "User_id",
   "images" : [ {
     "height" : null,
@@ -97,7 +97,7 @@ curl -H "Authorization: Basic "client_id:client_secret" (Encoded) " -d grant_typ
 
 *RECEIVED RESOURCE*
 
-{"access_token":"BQBROJvhGjuTmcVt7WWYTdh6EXz-5XUFcsdE16UF8AHPmtyIgTkfEBQHQqWW5_S4Uml5MYsAAkWG0I56kS0K0W-EWC8QcCrLRag_5sa_i9qkd5aAsdN0zGCcn_tJ25ElY4EHqC-6GKh7nh5zQn75M72_mmX7hHNCX9M-1CA8pYp6FWXTDuuelOFxLVaDoX1HfgitVg", 
+{"access_token":"DATA", 
 "token_type":"Bearer",
 "expires_in":3600,
 "scope":"playlist-read-private playlist-modify-private user-read-playback-state user-read-recently-played"}
