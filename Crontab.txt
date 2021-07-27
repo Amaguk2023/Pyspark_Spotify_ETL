@@ -1,4 +1,3 @@
-
 # Cron_tab spotify_etl_job
 
 MAILTO=""
