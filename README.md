@@ -23,4 +23,4 @@ The purpose of this was to a create project that could help anyone that wants to
 
 - To verify that your scheduled job is working you can change the crontab to "* * * * *".
 - Here is the website https://developer.spotify.com/documentation/general/guides/scopes/ with other Spotify scopes in case you don't want to use "recently played tracks".
-- Thank you Karolina Sowinska for your DE Beginners guide. 
+- Thank you Karolina Sowinska for the DE Beginners guide. 
