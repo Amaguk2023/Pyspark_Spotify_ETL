@@ -1,6 +1,15 @@
-# Cron_tab spotify_etl_job
+# .---------------- Minute (0 - 59)
+# |  .------------- Hour (0 - 23)
+# |  |  .---------- Day of month (1 - 31)
+# |  |  |  .------- Month (1 - 12) 
+# |  |  |  |  .---- Day of week (0 - 6) (Sometimes Sunday can be 0 or 7)
+# |  |  |  |  |
+# *  *  *  *  *   bash_file_path >> log_path
 
-MAILTO=""
+#Cron_tab spotify_etl_job
+
+MAILTO="" 
+
 0 0 * * * source /path/to/bash_file.sh/ >> /path/to/logfiles/`date +\%Y-\%m-\%d` -spotify_etl.log 2>&1
 
 
