@@ -1,5 +1,4 @@
 from pyspark.sql import SparkSession 
-from pyspark.sql import SQLContext
 from sqlalchemy import create_engine
 from datetime import datetime
 import datetime
