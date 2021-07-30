@@ -3,6 +3,7 @@ import data_request
 
 if __name__ == '__main__':
 
+    #CONSTRAINTS
     ENCODED_CLIENT_ID_CLIENT_SECRET = 'DATA'
     TOKEN_URL = 'https://accounts.spotify.com/api/token'
     REFRESH_TOKEN = 'DATA'
