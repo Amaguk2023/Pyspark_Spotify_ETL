@@ -23,4 +23,5 @@ The purpose of this is to help those that want to become Data Engineers, like my
 
 - To verify that your scheduled job is working you can change the crontab to "* * * * *".
 - Here is the website https://developer.spotify.com/documentation/general/guides/scopes/ with other Spotify scopes in case you don't want to use "recently played tracks".
-- Thank you Karolina Sowinska for your DE Beginners guide. 
+- Thank you Karolina Sowinska for your DE Beginners guide.
+- ETL_Modules is the original script divided in different modules.
