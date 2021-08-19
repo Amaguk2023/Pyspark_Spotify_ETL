@@ -4,9 +4,9 @@ from Spotify_ETL_Modules import data_request
 def token_extraction():
 
     #CONSTRAINTS
-    ENCODED_CLIENT_ID_CLIENT_SECRET = 'MWRhNzkxYjA3MjkyNDU5NmFhMDIwZGE2Mjc5M2MzZDM6NWY4ZmQyMGM4NmViNDQ1ZWExODVkYjM1NDAyNzVmZTY='
+    ENCODED_CLIENT_ID_CLIENT_SECRET = 'DATA'
     TOKEN_URL = 'https://accounts.spotify.com/api/token'
-    REFRESH_TOKEN = 'AQBYXIOttnhSQ9E-NIE5dG0snrxmi0UX_0iID7fvngQERMaHqtTQuK2X-78sjdqFXGlDay-Ku8pQ_RU5GoAHt6TAUfYc2D5sriV4xNhliJZKhbcdYAUQrsPEW7jauFvceUc'
+    REFRESH_TOKEN = 'DATA'
 
     #API CREDENTIALS FOR TOKEN REQUEST (RESPONSE 200 MEANS REQUEST ACHIEVED)
     headers = {

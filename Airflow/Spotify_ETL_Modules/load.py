@@ -4,7 +4,7 @@ from sqlalchemy import exc
 
 #LOAD DATA INTO SPOTIFY DATABASE TABLE
 def postgre_engine_load(df):
-    engine = create_engine('postgresql+psycopg2://ernesto:Snoopy2023@localhost/spotify', connect_args={'sslmode':'allow'})
+    engine = create_engine('postgresql+psycopg2://', connect_args={'sslmode':'allow'})
 
     try:
         df.to_sql("spotify_played_tracks", engine, index=False, if_exists='append')
